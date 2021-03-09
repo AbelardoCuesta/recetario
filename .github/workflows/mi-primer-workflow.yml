@@ -1,4 +1,4 @@
-nname: Hola mundo
+name: Hola mundo
 on:
   push:
     branches: [ master ]
