@@ -18,4 +18,7 @@ jobs:
       run: python -m unittest -v test_persona.py
     - name: Correr pruebas 2
       id: correr-pruebas2
-      run: python -m unittest -v test_persona.py  
+      run: python -m unittest -v test_persona.py 
+    - name: Nueva rama
+      id: nueva-rama
+      run: git branch release
