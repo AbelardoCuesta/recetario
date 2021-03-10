@@ -13,6 +13,9 @@ jobs:
       uses: actions/setup-python@v2
       with:
           python-version: '3.7'
-    - name: Correr pruebas
-      id: correr-pruebas
+    - name: Correr pruebas 1
+      id: correr-pruebas1
       run: python -m unittest -v test_persona.py
+    - name: Correr pruebas 2
+      id: correr-pruebas2
+      run: python -m unittest -v test_persona.py  
