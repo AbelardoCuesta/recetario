@@ -19,8 +19,8 @@ jobs:
         env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-        # The branch to create
-        branch: 'release-candidate2'  
+          # The branch to create
+          branch: 'release-candidate2'  
       - name: Correr pruebas 1
         id: correr-pruebas1
         run: python -m unittest -v test_persona.py    
