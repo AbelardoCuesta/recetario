@@ -1,7 +1,17 @@
-name: Pruebas unitarias
+name: Automerge
 on:
-  push:
-    branches: [ develop ]
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+    branches: [ master ]
+
 jobs:
   job1:
     name: Pruebas
