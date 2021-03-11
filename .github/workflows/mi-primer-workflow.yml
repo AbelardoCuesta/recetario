@@ -14,13 +14,13 @@ jobs:
         with:
           python-version: '3.7'
 
-      - name: Create branch
-        uses: peterjgrainger/action-create-branch@v2.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # The branch to create
-          branch: 'release-candidate3'  
+      #- name: Create branch
+      #  uses: peterjgrainger/action-create-branch@v2.0.1
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #  with:
+      #    # The branch to create
+      #    branch: 'release-candidate3'  
       - name: Correr pruebas 1
         id: correr-pruebas1
         run: python -m unittest -v test_persona.py    
