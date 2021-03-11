@@ -19,12 +19,10 @@ jobs:
     - name: Correr pruebas 2
       id: correr-pruebas2
       run: python -m unittest -v test_persona.py 
-    - name: Creacion release
-      uses: actions/upload-release-asset@v1.0.2
+    - name: Create branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-         upload_url: ${{ steps.create_release.outputs.upload_url }}
-         asset_path: target/${{ needs.version.outputs.jar-name }}
-         asset_name: ${{ needs.version.outputs.release-jar-name }}
-         asset_content_type: application/java-archive  
+        # The branch to create
+        branch: 'release-candidate'
