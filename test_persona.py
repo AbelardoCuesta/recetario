@@ -6,7 +6,7 @@ from persona import Persona
 class PersonaTestCase(unittest.TestCase):
 
    def setUp(self):
-      self.persona1 = Persona(nombre='Alejandra', edad=25)
+      self.persona1 = Persona(nombre='Alejandra', edad=30)
       self.persona2 = Persona(nombre='Abelardo', edad=22)
       self.persona3 = Persona(nombre='Alejandra', edad=25)
       self.persona4 = Persona(nombre='Diana', edad=25)
@@ -14,7 +14,7 @@ class PersonaTestCase(unittest.TestCase):
 
    def test_constructor(self):
       self.assertEqual(self.persona1.dar_nombre(), 'Alejandra')
-      self.assertEqual(self.persona1.dar_edad(), 25)
+      self.assertEqual(self.persona1.dar_edad(), 30)
 
    def test_anio_nacimiento(self):
       self.assertEqual(self.persona1.calcular_anio_nacimiento(True), datetime.datetime.now().year - 25)
