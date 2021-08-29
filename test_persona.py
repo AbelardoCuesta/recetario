@@ -7,7 +7,7 @@ class PersonaTestCase(unittest.TestCase):
 
    def setUp(self):
 
-      self.persona1 = Persona(nombre='Alejandra', edad=30)
+      self.persona1 = Persona(nombre='Alejandra', edad=25)
       self.persona2 = Persona(nombre='Alvis', edad=22)
 
       self.persona3 = Persona(nombre='Alejandra', edad=25)
